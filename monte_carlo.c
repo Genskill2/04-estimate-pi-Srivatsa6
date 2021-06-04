@@ -11,6 +11,22 @@ float frandom() {
   return ret;
 }
 
+float mc_pi(int n){
+    float inside = 0;
+    for(int i=0;i<n;i++){
+        float x = frandom();
+        float y = frandom();
+       
+        if(x*x + y*y <=1){
+            inside++;
+        }
+    }
+   
+    float ans = 4*inside/n;
+    return ans;
+}
+
+
 int main(void) {
   float pi0;
   float pi1;
@@ -38,6 +54,3 @@ int main(void) {
     }
   }
 }
-
-
-
